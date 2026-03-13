@@ -1,0 +1,579 @@
+# Instincts generated from https://github.com/gclm/alisthelper
+# Generated: 2026-03-13T11:20:24.882Z
+# Version: 2.0
+
+---
+id: alisthelper-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/gclm/alisthelper
+---
+
+# Alisthelper Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: feat, fix, docs, chore, perf
+
+## Evidence
+
+- 179 commits analyzed
+- Detected conventional commit pattern
+- Examples: ci: upgrade actions versions and refactor release workflow, refactor(ui): refactor state management and component patterns
+
+---
+id: alisthelper-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/gclm/alisthelper
+---
+
+# Alisthelper Commit Length
+
+## Action
+
+Keep commit messages concise (under 50 characters)
+
+## Evidence
+
+- Average commit message length: 42 chars
+- Based on 179 commits
+
+---
+id: alisthelper-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/alisthelper
+---
+
+# Alisthelper Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: alisthelper-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/alisthelper
+---
+
+# Alisthelper Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: alisthelper-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/gclm/alisthelper
+---
+
+# Alisthelper Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: alisthelper-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/gclm/alisthelper
+---
+
+# Alisthelper Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~10x per month
+- Files: **/*.test.*
+
+---
+id: alisthelper-workflow-refactoring
+trigger: "when refactoring code"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/gclm/alisthelper
+---
+
+# Alisthelper Workflow Refactoring
+
+## Action
+
+Follow the refactoring workflow:
+1. Ensure tests pass before refactor
+2. Refactor code structure
+3. Verify tests still pass
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: src/**/*
+
+---
+id: alisthelper-workflow-dependency-update
+trigger: "when doing dependency update"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/gclm/alisthelper
+---
+
+# Alisthelper Workflow Dependency Update
+
+## Action
+
+Follow the dependency-update workflow:
+1. Update pubspec.yaml with new versions
+2. Run dependency resolution
+3. Update pubspec.lock
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: pubspec.yaml, pubspec.lock
+
+---
+id: alisthelper-workflow-ci-workflow-update
+trigger: "when doing ci workflow update"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/gclm/alisthelper
+---
+
+# Alisthelper Workflow Ci Workflow Update
+
+## Action
+
+Follow the ci-workflow-update workflow:
+1. Update action versions
+2. Modify workflow configuration
+3. Add new build steps or permissions
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: .github/workflows/main.yml, .github/workflows/nightly.yml
+
+---
+id: alisthelper-workflow-state-management-refactor
+trigger: "when doing state management refactor"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/gclm/alisthelper
+---
+
+# Alisthelper Workflow State Management Refactor
+
+## Action
+
+Follow the state-management-refactor workflow:
+1. Update state model classes
+2. Refactor provider implementations
+3. Update widget consumers
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: lib/model/*_state.dart, lib/provider/*_provider.dart, lib/widgets/*.dart
+
+---
+id: alisthelper-workflow-localization-update
+trigger: "when doing localization update"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/gclm/alisthelper
+---
+
+# Alisthelper Workflow Localization Update
+
+## Action
+
+Follow the localization-update workflow:
+1. Update base language file
+2. Update translated versions
+3. Add new translation keys
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: lib/i18n/en.i18n.json, lib/i18n/zh-Hans-CN.i18n.json, lib/i18n/zh-Hant-TW.i18n.json
+
+---
+id: alisthelper-workflow-provider-enhancement
+trigger: "when doing provider enhancement"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/gclm/alisthelper
+---
+
+# Alisthelper Workflow Provider Enhancement
+
+## Action
+
+Follow the provider-enhancement workflow:
+1. Update provider logic
+2. Add new state fields
+3. Update related UI components
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: lib/provider/alist_provider.dart, lib/provider/rclone_provider.dart, lib/model/alist_state.dart
+
+---
+id: alisthelper-workflow-ui-widget-refactor
+trigger: "when doing ui widget refactor"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/gclm/alisthelper
+---
+
+# Alisthelper Workflow Ui Widget Refactor
+
+## Action
+
+Follow the ui-widget-refactor workflow:
+1. Update widget implementations
+2. Standardize button styles
+3. Improve layout patterns
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: lib/widgets/pages/*.dart, lib/widgets/*.dart
+
+---
+id: alisthelper-snake-case-files
+trigger: "When creating new files"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: gclm/alisthelper
+---
+
+# Alisthelper Snake Case Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Pattern in lib folder structure
+- Consistent across all Dart files
+
+---
+id: alisthelper-camel-case-functions
+trigger: "When defining functions or methods"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: gclm/alisthelper
+---
+
+# Alisthelper Camel Case Functions
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Standard Dart convention
+- Seen in provider methods
+
+---
+id: alisthelper-pascal-case-classes
+trigger: "When defining classes"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: gclm/alisthelper
+---
+
+# Alisthelper Pascal Case Classes
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Flutter/Dart standard
+- State and provider class patterns
+
+---
+id: alisthelper-conventional-commits
+trigger: "When making a commit"
+confidence: 0.95
+domain: git
+source: repo-analysis
+source_repo: gclm/alisthelper
+---
+
+# Alisthelper Conventional Commits
+
+## Action
+
+Use conventional commit format with prefixes: feat, fix, docs, chore, perf, build, style, refactor, ci
+
+## Evidence
+
+- All example commits follow this pattern
+- 42 character average length indicates structured format
+
+---
+id: alisthelper-commit-length-limit
+trigger: "When writing commit messages"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: gclm/alisthelper
+---
+
+# Alisthelper Commit Length Limit
+
+## Action
+
+Keep commit message around 42 characters for consistency
+
+## Evidence
+
+- Average commit length is 42 characters
+- All examples are concise
+
+---
+id: alisthelper-ref-watch-state
+trigger: "When accessing state in widgets or providers"
+confidence: 0.88
+domain: architecture
+source: repo-analysis
+source_repo: gclm/alisthelper
+---
+
+# Alisthelper Ref Watch State
+
+## Action
+
+Use ref.watch for state management with Riverpod providers
+
+## Evidence
+
+- refactor: update state management to use `ref.watch` for providers
+- State management refactor workflow frequency
+
+---
+id: alisthelper-separate-test-location
+trigger: "When creating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: gclm/alisthelper
+---
+
+# Alisthelper Separate Test Location
+
+## Action
+
+Place tests in separate test directory structure
+
+## Evidence
+
+- Architecture shows testLocation: separate
+- Standard Flutter project structure
+
+---
+id: alisthelper-update-pubspec-lock
+trigger: "When updating dependencies in pubspec.yaml"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: gclm/alisthelper
+---
+
+# Alisthelper Update Pubspec Lock
+
+## Action
+
+Always update pubspec.lock by running dependency resolution
+
+## Evidence
+
+- dependency-update workflow shows this pattern
+- 4x/month frequency indicates regular practice
+
+---
+id: alisthelper-github-actions-upgrade
+trigger: "When maintaining CI workflows"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: gclm/alisthelper
+---
+
+# Alisthelper Github Actions Upgrade
+
+## Action
+
+Upgrade action versions and refactor release workflow configuration
+
+## Evidence
+
+- ci: upgrade actions versions and refactor release workflow
+- CI workflow update pattern
+
+---
+id: alisthelper-state-provider-pattern
+trigger: "When refactoring state management"
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: gclm/alisthelper
+---
+
+# Alisthelper State Provider Pattern
+
+## Action
+
+Update state model classes, refactor provider implementations, then update widget consumers
+
+## Evidence
+
+- state-management-refactor workflow
+- 5x/month frequency
+- Provider files pattern
+
+---
+id: alisthelper-i18n-base-first
+trigger: "When updating localization"
+confidence: 0.92
+domain: workflow
+source: repo-analysis
+source_repo: gclm/alisthelper
+---
+
+# Alisthelper I18n Base First
+
+## Action
+
+Update base English language file first, then update translated versions
+
+## Evidence
+
+- localization-update workflow steps
+- Multiple i18n files present
+- chore(i18n): change localization files format
+
+---
+id: alisthelper-multi-platform-build
+trigger: "When setting up build workflows"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: gclm/alisthelper
+---
+
+# Alisthelper Multi Platform Build
+
+## Action
+
+Configure nightly builds for Windows and macOS with artifact upload
+
+## Evidence
+
+- feat: add nightly build workflow for Windows and macOS with artifact upload
+- Multiple platform folders present
+
+---
+id: alisthelper-type-specification
+trigger: "When defining method signatures"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/alisthelper
+---
+
+# Alisthelper Type Specification
+
+## Action
+
+Specify types explicitly for better code clarity
+
+## Evidence
+
+- fix: update method signatures to specify types for better clarity
+- Flutter/Dart best practices
+
+---
+id: alisthelper-multi-line-log-handling
+trigger: "When handling output or logs"
+confidence: 0.75
+domain: architecture
+source: repo-analysis
+source_repo: gclm/alisthelper
+---
+
+# Alisthelper Multi Line Log Handling
+
+## Action
+
+Improve output handling to support multi-line logs in addOutput method
+
+## Evidence
+
+- fix: improve output handling in addOutput method to support multi-line logs
+- Application involves log management
+
